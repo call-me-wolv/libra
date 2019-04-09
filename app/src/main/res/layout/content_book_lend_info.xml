@@ -12,7 +12,7 @@
         android:id="@+id/scrollView3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteX="88dp"
         tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
@@ -32,34 +32,34 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/book1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="24dp"
-        android:text="TextView"
+        android:text="hi"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/book2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="24dp"
-        android:text="TextView"
+        android:layout_marginTop="28dp"
+        android:text="hi"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/book1" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/book3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="24dp"
-        android:text="TextView"
+        android:text="hi"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/book2" />
 
     <TextView
         android:id="@+id/textView4"
@@ -72,34 +72,34 @@
         app:layout_constraintTop_toTopOf="@+id/scrollView3" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/issue1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
         android:layout_marginTop="24dp"
-        android:text="TextView"
+        android:text="10-02-19"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/issue2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
         android:layout_marginTop="24dp"
-        android:text="TextView"
+        android:text="10-02-19"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/book1" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/issue3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
         android:layout_marginTop="28dp"
-        android:text="TextView"
+        android:text="10-02-19"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/book2" />
 
     <TextView
         android:id="@+id/textView7"
@@ -112,32 +112,32 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/return1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="276dp"
         android:layout_marginTop="24dp"
-        android:text="TextView"
+        android:text="12/26/2019"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/return2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="276dp"
         android:layout_marginTop="24dp"
-        android:text="TextView"
+        android:text="12/26/2019"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/book1" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/return3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="276dp"
         android:layout_marginTop="24dp"
-        android:text="TextView"
+        android:text="12/26/2019"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/book2" />
 </android.support.constraint.ConstraintLayout>

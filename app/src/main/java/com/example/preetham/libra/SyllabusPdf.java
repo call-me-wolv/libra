@@ -1,7 +1,11 @@
 package com.example.preetham.libra;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.res.AssetManager;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,11 +14,42 @@ import android.view.View;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
 public class SyllabusPdf extends AppCompatActivity {
+    String previousActivityStr;
+    Boolean pdfOpened = false;
+    public void dialogBox(){
+        new AlertDialog.Builder(this)
+                .setTitle("File Not Found")
+                .setMessage("Sorry!file will be included in future")
+
+                // Specifying a listener allows you to take an action before dismissing the dialog.
+                // The dialog is automatically dismissed when a dialog button is clicked.
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Continue with delete operation
+                        Intent intent = new Intent(SyllabusPdf.this,YearMenu.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.putExtra("branch",previousActivityStr);
+                        startActivity(intent);
+                        finish();
+                    }
+                })
+
+                // A null listener allows the button to dismiss the dialog and take no further action.
+
+                .show();
+    }
+
+
+
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -108,8 +143,43 @@ public class SyllabusPdf extends AppCompatActivity {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
         //findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+        Bundle bundle = getIntent().getExtras();
+        //this string will be passed on to previous activity if file was not found
+        previousActivityStr = (String)bundle.get("id");
+        previousActivityStr = previousActivityStr.substring(0,2);
+        //normal stuff
+        final String FILE_NAME = (String)bundle.get("id")+".pdf";
         PDFView pdfView = findViewById(R.id.pdfView);
-        pdfView.fromAsset("file.pdf").load();
+        AssetManager mg = getResources().getAssets();
+        InputStream is = null;
+        try {
+            is = mg.open(FILE_NAME);
+            //File exists so do something with it
+            pdfView.fromAsset(FILE_NAME).load();
+            pdfOpened = true;
+        } catch (IOException ex) {
+            //file does not exist
+            dialogBox();
+        } finally {
+            if (is != null) {
+                try {
+                    is.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(!pdfOpened) {
+            dialogBox();
+        }
+        else{
+            super.onBackPressed();
+        }
     }
 
     @Override

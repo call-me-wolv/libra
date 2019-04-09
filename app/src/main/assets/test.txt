@@ -1,0 +1,27 @@
+                               Part A
+
+ Unit-1: Transistors, UJTs, and Thyristors 7 hours Operating Point, Common-Emitter Configuration, Thermal Runaway, Transistor Switch, UnijunctionTransistors, SCR.
+
+ Unit-2: Field Effect Transistors 6 hours Bipolar Junction Transistors versus Field EffectTransistors, Junction Field Effect Transistors, Metal Oxide Field Effect Transistors, Differences between JFETs and MOSFETs,Handling MOSFETs, Biasing MOSFETs, FET Applications, CMOS Devices,Insulated Gate Bipolar Transistors (IGBTs)
+
+ Unit-3: Optoelectronic Devices 6 hours Introduction, Photosensors, Photoconductors,Photodiodes, Phototransistors, Light-Emitting Diodes, Liquid CrystalDisplays, Cathode Ray Tube Displays, Emerging Display Technologies,Optocouplers
+
+ Unit-4 Small Signal Analysis of Amplifiers 7 hours Amplifier Bandwidth: General Frequency Considerations, Hybrid h-Parameter Model for an Amplifier, Transistor Hybrid Model, Analysis of a Transistor Amplifier using complete h-Parameter Model,
+ Analysis of a Transistor Amplifier Configurations using Simplified h-Parameter Model (CE configuration only), Small-Signal Analysis of FET Amplifiers, Cascading Amplifiers, Darlington Amplifier, Low-Frequency Response of Amplifiers (BJT amplifiers only).
+
+                           Part B
+ Unit-5: Large Signal Amplifiers, Feedback Amplifier 6 hours Classification and characteristics of Large Signal Amplifiers, Feedback Amplifiers:Classification of Amplifiers, Amplifier with Negative Feedback, Advantages of Negative Feedback, Feedback Topologies, Voltage-Series (Series-Shunt)Feedback, Voltage-Shunt (Shunt-Shunt) Feedback, Current-Series (Series-Series) Feedback, Current-Shunt (Shunt-Series) Feedback.
+
+ Unit-6: Sinusoidal Oscillators, Wave-Shaping Circuits 7 hours Classification ofOscillators, Conditions for Oscillations: Barkhausen Criterion,Types of Oscillators, Crystal Oscillator, Voltage-Controlled Oscillators, Frequency Stability. Wave-Shaping Circuits: Basic RC Low-Pass Circuit, RC Low-Pass Circuit as Integrator,Basic RC High-Pass Circuit, RC High-Pass Circuit as Differentiator, Multivibrators,Integrated Circuit (IC) Multivibrators.
+
+ Unit-7:Linear Power Supplies, Switched mode Power Supplies 7 hours
+ Linear Power Supplies: Constituents of a Linear Power Supply, Designing Mains Transformer;
+ Linear IC Voltage Regulators, Regulated Power Supply Parameters.
+ Switched Mode Power Supplies: Switched Mode Power Supplies, Switching Regulators,
+ Connecting Power Converters in Series, Connecting Power Converters in Parallel
+
+ Unit-8: Operational Amplifiers 6 hours
+ Ideal Opamp versus Practical Opamp, Performance Parameters,
+ Some Applications: Peak Detector Circuit, Absolute Value Circuit, Comparator, Active Filters,
+ Phase Shifters, Instrumentation Amplifier, Non-Linear Amplifier, Relaxation Oscillator,
+ Current-To-Voltage Converter, Voltage-To-Current Converter, Sine Wave Oscillators.

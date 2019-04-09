@@ -1,9 +1,12 @@
 package com.example.preetham.libra;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,9 +16,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class BookLendInfo extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    static  TextView book1;
+    static TextView book2,book3,issue1,issue2,issue3,return1,return2,return3;
+    boolean doubleBackToExitPressedOnce = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +49,9 @@ public class BookLendInfo extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //finding the views;
+
     }
 
     @Override
@@ -49,7 +60,23 @@ public class BookLendInfo extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            if (doubleBackToExitPressedOnce) {
+                    super.onBackPressed();
+                    return;
+                }
+
+                this.doubleBackToExitPressedOnce = true;
+                Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+                new Handler().postDelayed(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        doubleBackToExitPressedOnce=false;
+                    }
+                }, 2000);
+
+
         }
     }
 
@@ -85,15 +112,17 @@ public class BookLendInfo extends AppCompatActivity
 
         } else if (id == R.id.nav_prescribed) {
             Intent intent = new Intent(BookLendInfo.this, Syllabus.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
-            finish();
+          //  finish();
 
-        } else if (id == R.id.nav_reference) {
-            Intent intent  = new Intent(this,SyllabusPdf.class);
-            startActivity(intent);
-
-        } else if (id == R.id.nav_other) {
+//        } else if (id == R.id.nav_reference) {
+//            Intent intent  = new Intent(this,SyllabusPdf.class);
+//            startActivity(intent);
+//
+//        } else if (id == R.id.nav_other) {
+//            Intent intent = new Intent(BookLendInfo.this,TxtSyllabus.class);
+//            startActivity(intent);
 
         } else if (id == R.id.nav_onlinenewsletters) {
 
